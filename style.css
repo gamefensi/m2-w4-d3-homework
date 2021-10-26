@@ -1,0 +1,144 @@
+/*
+Bootstrap Breakpoints: 
+ X-Small	None	<576px
+ Small	sm	≥576px
+ Medium	md	≥768px
+ Large	lg	≥992px
+ Extra large	xl	≥1200px
+ */
+/* xs screens */
+ @media screen and (min-width: 200px) {
+    #leftside {
+        width: 10%;
+    }
+    #rightside {
+        width: 90%;
+    }
+    header ul.nav {
+        font-size: 1.2rem;
+    }
+ }
+ /* => small screens */
+ @media screen and (min-width: 576px) {
+ }
+/* => medium screens */
+@media screen and (min-width: 768px) {
+    section#blogposts {
+        position: absolute;
+        left: 20%;
+        top: 70px;
+        padding: 50px;
+    }
+    main h2 {
+        position: absolute;
+        left: 20%;
+        top: 30px;
+        margin: 25px 0 200px 50px;
+    }
+
+}
+/* => large screens */
+@media screen and (min-width: 992px) {
+}
+/* >= xlarge screens */
+@media screen and (min-width: 1200px) {
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#leftside {
+    float: left;
+    min-height: 1200px;
+    background-color: rgb(77, 192, 154);
+}
+#rightside {
+    float: left;
+    width: 70%;
+    min-height: 1200px;
+    background-color: rgb(238, 226, 192);
+    position: relative;
+}
+#container {
+    background-color: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    min-width: 1100px;
+    min-height: 1050px;
+    border-radius: 0.7em;
+}
+header {
+    height: 100px;
+    background-color: rgba(231, 229, 229, 0.5);
+    font-size:2.75em;
+    padding: 0.5em;
+    color: rgb(216, 150, 7);
+}
+header span {
+    font-family: 'Sacramento', cursive;
+}
+main {
+    position: relative;
+}
+main h2 {
+    color: rgb(60, 190, 160);
+    text-transform: uppercase;
+}
+main #photos img {
+    margin: 0.75em;
+    border: 0.85em solid rgb(255, 255, 255);
+}
+
+main .post {
+    margin: 25px;
+    padding: 25px;
+    border: 2px solid rgba(83, 78, 58, 0.6);
+    border-radius: 0.5em;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.85em;
+}
+.post img {
+    width: 50px;
+    /* height: 30px; */
+}
+.post img:hover {
+    cursor: pointer;
+}
+#infoBox {
+    max-width: 400px;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    background: rgba(128, 101, 101);
+    color:rgba(255,255,255);
+    padding: 2% 5%;
+    z-index: 11;
+    border: rgb(255, 255, 255) dashed 1px;
+}
+#infoBox p {
+    max-width: 280px;
+}
+#infoBox p:first-child {
+    font-weight: bold;
+    font-size:larger;
+    text-align: center;
+}
+#infoBox p:nth-child(n+2) {
+    text-align:justify;
+    width: 100%;
+}
+#infoBox .btn-close {
+    font-weight: bold;
+    color:rgb(251, 255, 43);
+    text-transform: uppercase;
+}
+#infoBox .close:hover {
+    cursor: pointer;
+}
