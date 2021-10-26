@@ -14,32 +14,21 @@
 		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body >
-		<!-- <header id="headerNav">
-			<ul class="nav nav-pills justify-content-end">
-				<li class="nav-item">
-				  <a class="nav-link active" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#">Recipes</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#">Lifestyles</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#">Videos</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
-				  </li>
-			  </ul> -->
-		</header>
+		
 		<div class="row">
 			<aside id="leftside"></aside>
 			<aside id="rightside"></aside>
 			<!-- Food Blog -->
-			<div id="container" class="container">
+			<div id="container" class="container-xl">
 				<div id="component1">
+					<div class="jumbotron jumbotron-fluid">
+						<div class="container">
+						<h1 class="display-4 d-flex align-items-start">Foodie Heaven</h1>
+						<p class="lead"><em>People who love to eat are always the best people.</em></p>
+						</div>
+					</div>
 					<mycomponent1></mycomponent1>
+	
 				</div>
 				<main>
 					<!-- Food Img -->
@@ -47,7 +36,6 @@
 						<img class="img-fluid"
 							:src= 'src'
 							:alt= 'alt'
-							:width= 'width'
 						/>
 					</aside>
 					<!-- COMMENTS TITLE -->
@@ -62,19 +50,21 @@
 							<img :src= "'/images/profile.png'" @click= 'displayInfo(posts,post)' title='default pic'/>
 							<span class="author">{{post.author}}</span> —
 							<span class="date">{{post.date}}</span>
-							<span class="reply">{{post.reply}}</span>
+							<span class="reply">{{post.reply}}</span><br><br>
 							<p>{{post.text}}</p>
 							</div>	
 						</div>
 
 						<!-- Infobox -->
 						<div id="infoBox" class="box" v-for="post in posts" v-show='post.isShowing'>
-	
+							<div>
+								<button v-on:click="displayInfo(posts,post)" class="close justify-content-right" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							</div>
 								<p>{{post.author}}</p>
 								<p>Foodie level: {{post.level}}</p>
 								<p>Bio: {{post.bio}}</p>
 								<div class="close" >
-									<button v-on:click="displayInfo(posts,post)" class="btn-close" aria-label="Close"></button>
+
 	
 							</div>
 	

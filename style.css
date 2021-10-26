@@ -7,138 +7,195 @@ Bootstrap Breakpoints:
  Extra large	xl	≥1200px
  */
 /* xs screens */
- @media screen and (min-width: 200px) {
-    #leftside {
-        width: 10%;
-    }
-    #rightside {
-        width: 90%;
-    }
-    header ul.nav {
-        font-size: 1.2rem;
-    }
- }
- /* => small screens */
- @media screen and (min-width: 576px) {
- }
+@media screen and (min-width: 200px) {
+	#leftside {
+		width: 10%;
+	}
+	#rightside {
+		width: 90%;
+	}
+	header ul.nav {
+		font-size: 1.2rem;
+	}
+	main #photos img {
+		width: 300px;
+		margin: 15em 0.75em 0 0.75em;
+	}
+	#blogposts {
+		width: 100%;
+		overflow: visible;
+		max-height: 1100px;
+	}
+	html {
+		font-size: 0.85rem;
+	}
+	#container {
+		left: 5%;
+		top: 0;
+	}
+}
+/* => small screens */
+@media screen and (min-width: 576px) {
+}
 /* => medium screens */
 @media screen and (min-width: 768px) {
-    section#blogposts {
-        position: absolute;
-        left: 20%;
-        top: 70px;
-        padding: 50px;
-    }
-    main h2 {
-        position: absolute;
-        left: 20%;
-        top: 30px;
-        margin: 25px 0 200px 50px;
-    }
+	section#blogposts {
+		position: absolute;
+		left: 20%;
+		top: 70px;
+		padding: 50px;
+	}
 
+	main h2 {
+		position: absolute;
+		left: 20%;
+		top: 50px;
+		margin: 25px 0 200px 50px;
+	}
+	html {
+		font-size: 1rem;
+	}
+	main #photos img {
+		width: 200px;
+		margin: 6em 0.75em 0 0.75em;
+	}
+	#container {
+		left: 10%;
+		top: 5%;
+	}
 }
 /* => large screens */
 @media screen and (min-width: 992px) {
+	html {
+		font-size: 1.1rem;
+	}
+	#container {
+		left: 12%;
+		top: 5%;
+	}
 }
 /* >= xlarge screens */
 @media screen and (min-width: 1200px) {
+	html {
+		font-size: 1.2rem;
+	}
+	#container {
+		left: 15%;
+		top: 10%;
+	}
 }
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 #leftside {
-    float: left;
-    min-height: 1200px;
-    background-color: rgb(77, 192, 154);
+	float: left;
+	min-height: 1900px;
+	background-color: rgb(77, 192, 154);
 }
 #rightside {
-    float: left;
-    width: 70%;
-    min-height: 1200px;
-    background-color: rgb(238, 226, 192);
-    position: relative;
+	float: left;
+	min-height: 1900px;
+	background-color: rgb(238, 226, 192);
+	position: relative;
 }
 #container {
-    background-color: rgba(255, 255, 255, 0.85);
-    position: absolute;
-    top: 15%;
-    left: 15%;
-    min-width: 1100px;
-    min-height: 1050px;
-    border-radius: 0.7em;
+	background-color: rgba(255, 255, 255, 0.85);
+	position: absolute;
+
+	min-width: 1100px;
+	min-height: 1900px;
+	border-radius: 0.7em;
 }
 header {
-    height: 100px;
-    background-color: rgba(231, 229, 229, 0.5);
-    font-size:2.75em;
-    padding: 0.5em;
-    color: rgb(216, 150, 7);
+	height: 100px;
+	background-color: rgba(231, 229, 229, 0.5);
+	font-size: 2.75em;
+	padding: 0.5em 0.5em 1em 0.5em;
+	color: rgb(216, 150, 7);
 }
 header span {
-    font-family: 'Sacramento', cursive;
+	font-family: 'Sacramento', cursive;
+	margin-top: 0;
 }
+
 main {
-    position: relative;
+	position: relative;
 }
 main h2 {
-    color: rgb(60, 190, 160);
-    text-transform: uppercase;
+	color: rgb(60, 190, 160);
+	text-transform: uppercase;
 }
 main #photos img {
-    margin: 0.75em;
-    border: 0.85em solid rgb(255, 255, 255);
+	border: 0.85em solid rgb(255, 255, 255);
 }
 
 main .post {
-    margin: 25px;
-    padding: 25px;
-    border: 2px solid rgba(83, 78, 58, 0.6);
-    border-radius: 0.5em;
+	margin: 25px;
+	padding: 25px;
+	border: 2px solid rgba(83, 78, 58, 0.6);
+	border-radius: 0.5em;
+	max-width: 700px;
 }
 footer {
-    position: absolute;
-    bottom: 0;
-    height: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 0.85em;
+	position: absolute;
+	bottom: 0;
+	height: 10px;
+	width: 100%;
+	text-align: center;
+	font-size: 0.85em;
 }
 .post img {
-    width: 50px;
-    /* height: 30px; */
+	width: 50px;
 }
 .post img:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 #infoBox {
-    max-width: 400px;
-    position: fixed;
-    top: 40%;
-    left: 40%;
-    background: rgba(128, 101, 101);
-    color:rgba(255,255,255);
-    padding: 2% 5%;
-    z-index: 11;
-    border: rgb(255, 255, 255) dashed 1px;
+	max-width: 400px;
+	position: fixed;
+	top: 40%;
+	left: 40%;
+	background: rgba(128, 101, 101);
+	color: rgba(255, 255, 255);
+	padding: 50px 25px 50px 25px;
+	z-index: 11;
+	border: rgb(255, 255, 255) dashed 2px;
 }
 #infoBox p {
-    max-width: 280px;
+	max-width: 280px;
 }
 #infoBox p:first-child {
-    font-weight: bold;
-    font-size:larger;
-    text-align: center;
+	font-weight: bold;
+	font-size: larger;
+	text-align: center;
 }
-#infoBox p:nth-child(n+2) {
-    text-align:justify;
-    width: 100%;
+#infoBox p:nth-child(n + 2) {
+	text-align: justify;
+	width: 100%;
 }
-#infoBox .btn-close {
-    font-weight: bold;
-    color:rgb(251, 255, 43);
-    text-transform: uppercase;
+#infoBox .close {
+	color: white;
+	min-width: 40px;
+	min-height: 40px;
 }
 #infoBox .close:hover {
-    cursor: pointer;
+	cursor: pointer;
+}
+
+.jumbotron.jumbotron-fluid {
+	background: url(/images/coverimage.png) no-repeat;
+	background-size: cover;
+	padding-top: 4%;
+}
+.jumbotron p {
+	margin-top: 1em;
+	max-width: 40%;
+}
+.nav .nav-item .nav-link {
+	color: rgb(60, 190, 160);
+}
+.nav .nav-item .nav-link.active {
+	color: rgb(255, 255, 255);
+	background-color: rgb(60, 190, 160);
 }
