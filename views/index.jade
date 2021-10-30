@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  .row
+    aside#leftside
+    aside#rightside
+    #container.container-xl
+      #component1
+        .jumbotron.jumbotron-fluid
+          .container
+            h1.display-4.d-flex.align-items-start Foodie Heaven
+            p.lead
+              em People who love to eat are always the best people. - Julia Child
+        mycomponent1
+      main
+        aside#photos
+          img.img-fluid(:src='src', :alt='alt')
+        #component2
+          mycomponent2
+        section#blogposts
+          div(v-bind:style='styleObj', v-show='overlay')
+          .overflow-auto
+            .post(v-for='post in posts')
+              img(:src="'/images/profile.png'", @click='displayInfo(posts,post)', title='default pic')
+              | 
+              span.author {{post.author}} 
+              | - 
+              span.date {{post.date}}
+              | 
+              span.reply {{post.reply}}
+              br
+              br
+              p {{post.text}}
+          #infoBox.box(v-for='post in posts', v-show='post.isShowing')
+            div
+              button.close.justify-content-right(v-on:click='displayInfo(posts,post)', aria-label='Close')
+                span(aria-hidden='true') &times;
+            p {{post.author}}
+            p Foodie level: {{post.level}}
+            p Bio: {{post.bio}}
+            .close
+      div
+      footer &copy; Copyright FOOD BLOG
+    script(src='/javascripts/vue.js')
+    script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', integrity='sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns', crossorigin='anonymous')
